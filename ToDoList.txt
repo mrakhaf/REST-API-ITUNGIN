@@ -1,0 +1,11 @@
+Fitur
+1. Register (sudah)
+2. Login (sudah)
+3. Tambah Pemasukkan (sudah)
+4. Tampil Tanggal -> juka di tap maka muncul pemasukan pada tanggal tsb
+5. Tampil Jumlah semua pemasukan
+
+
+
+
+
