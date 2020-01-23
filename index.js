@@ -32,4 +32,12 @@ sequelize
     console.error('Unable to connect to the database:', err)
   })
 
+sequelize.sync({
+  force: true,
+  logging: false
+}).then(() => {
+  console.log("Table has been created")
+
+})
+
 app.listen(PORT, () => console.log(`Server running on localhost ${PORT}`))
