@@ -14,9 +14,7 @@ app.use(
 )
 
 app.get('/', (req, res) => {
-  res.render('home', {
-    layout: 'main'
-  })
+  res.send('Welcome to Itungin APP')
 })
 
 app.use('/api/user', require('./routes/api/userRoutes'))
