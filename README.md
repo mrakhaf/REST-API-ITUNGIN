@@ -12,6 +12,9 @@ Postman -> https://www.getpostman.com/collections/3b139b018fb130553cb9
 url information : 
 open code -> open file 'routes' -> in pemasukkanRoutes.js and userRoutes.js
 
+Heroku : 
+https://api-itungin.herokuapp.com/
+
 Thank you and Good luck guys
 
 
