@@ -9,17 +9,17 @@ router.post('/register', (req, res) => {
       email: req.body.email
     })
     .then((data) => {
-      res.json({
+      res.status(200).json({
         msg: 'Success create an account',
         data: {
           username: data.username
         }
-      }).statusCode(200)
+      })
     })
     .catch(() => {
-      res.json({
+      res.status(403).json({
         msg: 'Username or email is not available'
-      }).statusCode(403)
+      })
     })
 })
 
