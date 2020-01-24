@@ -16,9 +16,9 @@ router.post('/register', (req, res) => {
         }
       })
     })
-    .catch(() => {
+    .catch(err => {
       res.status(403).json({
-        msg: 'Username or email is not available'
+        err
       })
     })
 })
@@ -39,7 +39,7 @@ router.post('/login', (req, res) => {
           res.json({
             msg: 'Succes Login',
             data: {
-              username: result.username
+              username: result.id_user
             }
           })
         } else {
