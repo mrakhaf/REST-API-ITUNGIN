@@ -4,7 +4,7 @@ const Sequelize = require('sequelize')
 const User = sequelize.define('akun', {
   id_user: {
     type: Sequelize.INTEGER,
-    autoIncreament: true,
+    autoIncrement: true,
     primaryKey: true
   },
   username: {
