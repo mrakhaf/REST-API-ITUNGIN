@@ -5,8 +5,7 @@ const User = sequelize.define('akun', {
   id_user: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
-    primaryKey: true,
-    unique: true
+    primaryKey: true
   },
   username: {
     type: Sequelize.STRING,
