@@ -29,7 +29,7 @@ sequelize
   })
 
 sequelize.sync({
-  force: true,
+  force: false,
   logging: false
 }).then(() => {
   console.log("Table has been created")
