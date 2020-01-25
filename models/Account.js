@@ -3,7 +3,7 @@ const Sequelize = require('sequelize')
 
 const User = sequelize.define('akun', {
   id_user: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.TEXT,
     primaryKey: true
   },
   username: {
