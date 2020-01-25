@@ -1,9 +1,14 @@
 Fitur
-1. Register (sudah)
-2. Login (sudah)
-3. Tambah Pemasukkan (sudah)
-4. Tampil Tanggal -> juka di tap maka muncul pemasukan pada tanggal tsb
-5. Tampil Jumlah semua pemasukan
+1. Register (sudah) : https://api-itungin.herokuapp.com/api/user/register
+2. Login (sudah) : https://api-itungin.herokuapp.com/api/user/login
+3. Tambah Pemasukkan (sudah) : https://api-itungin.herokuapp.com/api/pemasukkan/tambah/:id_user
+4. Tampil Tanggal -> juka di tap maka muncul pemasukan pada tanggal tsb : https://api-itungin.herokuapp.com/api/pemasukkan//tampil/:id_user
+5. Tampil Jumlah semua pemasukan : https://api-itungin.herokuapp.com/api/pemasukkan//tampilsemua/:id_user
+6. tampil Berdasarkan hari : https://api-itungin.herokuapp.com/api/pemasukkan//tampil/:id_user/:tanggal
+
+
+tampil semua akun: /user/akun
+tampil semua pemasukkan : /pemasukkan/tampilsemua
 
 
 

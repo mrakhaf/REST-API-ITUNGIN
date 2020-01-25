@@ -58,6 +58,17 @@ router.post('/login', (req, res) => {
     })
 })
 
+router.get('/akun', (req, res) => {
+  User.findAll()
+    .then(result => {
+      res.json({
+        result
+      })
+    })
+    .catch(err => {
+      res.json(err)
+    })
+})
 
 
 module.exports = router

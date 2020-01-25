@@ -101,4 +101,18 @@ router.get('/tampilsemua/:id_user', (req, res) => {
   })
 })
 
+router.get('/tampilsemua', (req, res) => {
+  Pemasukkan.findAll()
+    .then(result => {
+      res.json({
+        result
+      })
+    })
+    .catch(err => {
+      res.json({
+        err
+      })
+    })
+})
+
 module.exports = router

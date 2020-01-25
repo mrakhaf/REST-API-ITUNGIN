@@ -5,14 +5,16 @@ const Sequelize = require('sequelize')
 const Pemasukkan = sequelize.define('datapemasukkan', {
   id_pemasukkan: {
     type: Sequelize.UUID,
-    primaryKey: true
+    primaryKey: true,
+    allowNull: false
   },
   id_user: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    allowNull: false
   },
   pemasukkan: {
     type: Sequelize.INTEGER,
-    notNull: true
+    allowNull: false
   },
   tanggal: {
     type: Sequelize.DATEONLY

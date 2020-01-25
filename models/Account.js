@@ -9,16 +9,20 @@ const User = sequelize.define('akun', {
   },
   username: {
     type: Sequelize.STRING,
-    unique: true
+    unique: true,
+    allowNull: false
   },
   nama: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   },
   password: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   },
   email: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   }
 }, {
   timestamps: false,
