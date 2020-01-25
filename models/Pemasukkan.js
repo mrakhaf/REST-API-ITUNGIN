@@ -4,7 +4,7 @@ const Sequelize = require('sequelize')
 
 const Pemasukkan = sequelize.define('datapemasukkan', {
   id_pemasukkan: {
-    type: Sequelize.TEXT,
+    type: Sequelize.TEXT('tiny'),
     primaryKey: true
   },
   id_user: {
