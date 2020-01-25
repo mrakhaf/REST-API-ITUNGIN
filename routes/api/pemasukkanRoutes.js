@@ -3,6 +3,7 @@ const Pemasukkan = require('../../models/Pemasukkan')
 const User = require('../../models/Account')
 const moment = require('moment')
 
+
 router.post('/tambah/:id_user', (req, res) => {
   User.findOne({
     where: {
@@ -10,11 +11,11 @@ router.post('/tambah/:id_user', (req, res) => {
     }
   }).then(result => {
     Pemasukkan.create({
-      id_user: result.id_user,
-      pemasukkan: req.body.pemasukkan,
-      tanggal: moment().format('YYYY-MM-DD'),
-      jam: moment().format('HH:mm:ss')
-    })
+        id_user: result.id_user,
+        pemasukkan: req.body.pemasukkan,
+        tanggal: moment().format('YYYY-MM-DD'),
+        jam: moment().format('HH:mm:ss')
+      })
       .then(data => {
         res.json({
           msg: 'Berhasil tambah pemasukkan',
