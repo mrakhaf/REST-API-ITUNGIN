@@ -31,11 +31,12 @@ sequelize
   })
 
 sequelize.sync({
-  force: false,
+  force: true,
   logging: false
 }).then(() => {
   console.log("Table has been created")
-
+}).catch(err => {
+  console.log(err)
 })
 
 app.listen(PORT, () => console.log(`Server running on localhost ${PORT}`))
