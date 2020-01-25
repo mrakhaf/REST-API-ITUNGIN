@@ -4,8 +4,6 @@ const sequelize = require('./config/db')
 const bp = require('body-parser')
 const PORT = process.env.PORT || 7000
 
-
-
 app.use(bp.json())
 app.use(
   bp.urlencoded({
