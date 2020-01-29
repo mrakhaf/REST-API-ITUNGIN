@@ -2,7 +2,7 @@ const router = require('express').Router()
 const User = require('../../models/Account')
 const uuid = require('uuid')
 
-const serialNumber = uuid()
+let serialNumber = uuid.v4()
 
 router.post('/register', (req, res) => {
   User.create({
