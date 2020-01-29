@@ -4,7 +4,7 @@ const User = require('../../models/Account')
 const moment = require('moment')
 const uuid = require('uuid')
 
-let serialNumber = uuid.v4()
+
 
 router.post('/tambah/:id_user', (req, res) => {
   User.findOne({
@@ -13,7 +13,7 @@ router.post('/tambah/:id_user', (req, res) => {
     }
   }).then(result => {
     Pemasukkan.create({
-        id_pemasukkan: serialNumber,
+        id_pemasukkan: uuid.v4(),
         id_user: result.id_user,
         pemasukkan: req.body.pemasukkan,
         tanggal: moment().format('YYYY-MM-DD'),
