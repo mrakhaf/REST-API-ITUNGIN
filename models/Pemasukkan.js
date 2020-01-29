@@ -9,7 +9,7 @@ const Pemasukkan = sequelize.define('datapemasukkan', {
     allowNull: false
   },
   id_user: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.UUID,
     allowNull: false
   },
   pemasukkan: {
