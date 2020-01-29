@@ -16,7 +16,8 @@ router.post('/register', (req, res) => {
       res.status(200).json({
         msg: 'Success create an account',
         data: {
-          username: data.username
+          username: data.username,
+          id_user: data.id_user
         }
       })
     })

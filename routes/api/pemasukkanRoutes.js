@@ -6,10 +6,10 @@ const uuid = require('uuid')
 
 let serialNumber = uuid.v4()
 
-router.post('/tambah/:username', (req, res) => {
+router.post('/tambah/:id_user', (req, res) => {
   User.findOne({
     where: {
-      id_user: req.params.username
+      id_user: req.params.id_user
     }
   }).then(result => {
     Pemasukkan.create({
@@ -39,7 +39,7 @@ router.post('/tambah/:username', (req, res) => {
 })
 
 //Menampilkan per-tanggal
-router.get('/tampil/:username', (req, res) => {
+router.get('/tampil/:id_user', (req, res) => {
   Pemasukkan.findAll({
     attributes: ['tanggal'],
     group: ['tanggal'],
@@ -61,14 +61,14 @@ router.get('/tampil/:username', (req, res) => {
 })
 
 //Menampilkan per-pemasukkan berdasarkan hari
-router.get('/tampil/:username/:tanggal', (req, res) => {
+router.get('/tampil/:id_user/:tanggal', (req, res) => {
   const tgl = moment(req.params.tanggal)
     .format('YYYY-MM-DD')
     .split(' ')
   console.log(tgl)
   Pemasukkan.findAll({
     where: {
-      id_user: req.params.username,
+      id_user: req.params.id_user,
       tanggal: tgl[0]
     }
   }).then(hasil => {
@@ -86,10 +86,10 @@ router.get('/tampil/:username/:tanggal', (req, res) => {
 })
 
 //Tampil jumlah pemasukkan semua
-router.get('/tampilsemua/:username', (req, res) => {
+router.get('/tampilsemua/:id_user', (req, res) => {
   Pemasukkan.sum('pemasukkan', {
     where: {
-      id_user: req.params.username
+      id_user: req.params.id_user
     }
   }).then(totalPemasukkan => {
     if (!totalPemasukkan) {
