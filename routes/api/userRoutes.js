@@ -45,7 +45,7 @@ router.post('/login', (req, res) => {
             data: {
               id_user: result.id_user,
               username: result.username,
-              name: result.name
+              nama: result.nama
             }
           })
         } else {
