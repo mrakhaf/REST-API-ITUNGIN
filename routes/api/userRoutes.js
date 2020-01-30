@@ -43,7 +43,9 @@ router.post('/login', (req, res) => {
           res.json({
             msg: 'Succes Login',
             data: {
-              id_user: result.id_user
+              id_user: result.id_user,
+              username: result.username,
+              name: result.name
             }
           })
         } else {
